@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reviews</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Reviews</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Text</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for review in reviews %}
+            <tr>
+                <td>{{ review.username }}</td>
+                <td>{{ review.text }}</td>
+                <td>{{ review.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
